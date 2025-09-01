@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/-EducationalPortfolio/static/js/main.b5687905.js",
+    "static/js/453.3147114e.chunk.js": "/-EducationalPortfolio/static/js/453.3147114e.chunk.js",
+    "static/media/specialPostImg.webp": "/-EducationalPortfolio/static/media/specialPostImg.0622fafdd3291dc9f179.webp",
+    "static/media/featuredPostImg.webp": "/-EducationalPortfolio/static/media/featuredPostImg.19bb264558ebc032bfbd.webp",
+    "static/media/LeslieAlexander.webp": "/-EducationalPortfolio/static/media/LeslieAlexander.3bf1ac0429dfcb6ecf75.webp",
+    "static/media/FloydMiles.webp": "/-EducationalPortfolio/static/media/FloydMiles.53dba9b1cceb80d51ae6.webp",
+    "static/media/DianneRussill.webp": "/-EducationalPortfolio/static/media/DianneRussill.94438d36bc2f497da207.webp",
+    "static/media/mainImg.webp": "/-EducationalPortfolio/static/media/mainImg.8ed8d2ff95561f9c4669.webp",
+    "static/media/JennyWilson.webp": "/-EducationalPortfolio/static/media/JennyWilson.4b3842cbd853a6fbbf71.webp",
+    "static/media/icons-sprite.svg": "/-EducationalPortfolio/static/media/icons-sprite.44ed1f9530ca0d43e21f574cca90bdad.svg",
+    "static/media/JonatanVallem.webp": "/-EducationalPortfolio/static/media/JonatanVallem.bc1c52f80bcc4cfce28c.webp",
+    "index.html": "/-EducationalPortfolio/index.html",
+    "static/media/ArrowLeft.svg": "/-EducationalPortfolio/static/media/ArrowLeft.7ca349ec88a70f799eb58a259c47747c.svg",
+    "static/media/ArrowRirht.svg": "/-EducationalPortfolio/static/media/ArrowRirht.3b3eed6cac1dfd1062d07c25785d8a65.svg",
+    "main.b5687905.js.map": "/-EducationalPortfolio/static/js/main.b5687905.js.map",
+    "453.3147114e.chunk.js.map": "/-EducationalPortfolio/static/js/453.3147114e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b5687905.js"
+  ]
+}
