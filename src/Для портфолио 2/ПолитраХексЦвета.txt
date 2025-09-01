@@ -1,0 +1,8 @@
+#232536  Black
+#FFD050  Yellow
+#592EA9  Purple
+#4C4C4C  Dark Grey
+#6D6E76  Medium grey
+#F4F4F4  Light grey
+#F4F0F8  Lavender
+#FBF6EA  Light yellow

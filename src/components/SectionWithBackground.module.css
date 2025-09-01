@@ -1,0 +1,6 @@
+.backgroundSection{
+    height: 100%;
+    background-image: url('../../../assets/images/mainImg.webp');
+    background-size: cover;
+    background-position: center;
+}
