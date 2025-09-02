@@ -24,18 +24,18 @@ const StyledHeaderMenu = styled.nav`
         justify-content: center;
     }    
 
-    @media (max-width:840px) {
+    @media (max-width:900px) {
         display: none;
     }
 `
 
 const ListItem = styled.li`
-     width: 80px;
+    width: 100px;
 `
 
 
 const Link = styled.a`
     color: ${theme.colors.lightGrey};
     cursor: pointer;
-
+    width: 100px;
 `

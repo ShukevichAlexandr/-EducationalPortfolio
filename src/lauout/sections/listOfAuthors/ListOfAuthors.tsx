@@ -60,6 +60,11 @@ const ResponsiveFlexWrapper2 = styled(FlexWrapper)`
 @media (max-width:785px) {
     flex-wrap: wrap;
 }
+
+@media (max-width:500px) {
+    padding: 0 20px;
+}
+
 `
 
 

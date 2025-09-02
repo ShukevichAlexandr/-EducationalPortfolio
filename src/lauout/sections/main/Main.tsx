@@ -19,13 +19,13 @@ export const Main = () => {
           <ShadowOverlay/>
         </ImageContainer>
         <PositionWraper>
-        <FlexWrapper direction="column" gap={"15px"} maxWidth="804px" height="400px" justify={'space-between'}>
-            <UpperCaseText className="mainUpperCaseText">POSTED ON <BoldWord className="mainBoldWord">STARTUP</BoldWord></UpperCaseText>
+        <FlexWrapper direction="column" gap={"15px"} maxWidth="804px" minHeight="400px" justify={'space-between'}>
+            <UpperCaseText >POSTED ON <BoldWord>STARTUP</BoldWord></UpperCaseText>
             <MainTitle id="postedOnStartup">Step-by-step guide to choosing great font pairs</MainTitle>
             <PostMetadata htmlFor="postedOnStartup" className="postMetadata">By <Name className="nameAutor" href="">James West</Name> | May 23, 2022</PostMetadata>
-            <SmallText className={'textMainSection'}>Duis aute irute dolor in reprehenderit in voluptate valit essce cillum dolor eu
+            <SmallText >Duis aute irute dolor in reprehenderit in voluptate valit essce cillum dolor eu
               fugiat nulia pariatur. Excepteur sint occaecat cupidatat non proident.</SmallText>
-              <Button width={'204px'} height={'56px'} background={'#FFD050'}>{'Read More >'}</Button> 
+              <Button  background={'#FFD050'}>{'Read More >'}</Button> 
           </FlexWrapper>
         </PositionWraper>
       </Container>
@@ -120,10 +120,14 @@ color: ${theme.colors.yellow};
 `
 
 const UpperCaseText = styled.span`
-
+${font({family: "'Inter', sans-serif", weight: 600, Fmax:16, Fmin:12})};
+letter-spacing: 0.187;
+line-height: 20px;
 `
 const BoldWord = styled.span`
-
+${font({family: "'Inter', sans-serif", weight: 900, Fmax:16, Fmin:12})};
+letter-spacing: 0.187;
+line-height: 20px; 
 `
 
 export default Main;

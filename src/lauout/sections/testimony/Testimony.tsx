@@ -13,12 +13,12 @@ return (
 
             <ResponsiveFlexWrapper1 padding={'0 80px'} >
                 <FlexWrapper>
-                <FlexWrapper direction={'column'} maxWidth={'349px'} margin={'92px 120px 0 0'} minWidth={'225px'}>
+                <ResponsiveFlexWrapper4 direction={'column'} maxWidth={'349px'} margin={'92px 120px 0 0'} minWidth={'225px'}>
                         <DescriptionBlock>TESTIMONIALs</DescriptionBlock>
                         <MainTitleTestimony>What people say about our blog</MainTitleTestimony>
                         <TextTestimony>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</TextTestimony>
                 
-                </FlexWrapper>
+                </ResponsiveFlexWrapper4>
                 <CenterLine/>
                 </FlexWrapper>
 
@@ -64,9 +64,6 @@ const ResponsiveFlexWrapper1 = styled(FlexWrapper)`
 @media (max-width:875px) {
     flex-direction: column;
 }
-    @media ${theme.media.mobil} {
-   
-}
 
 @media (max-width:500px) {
     padding: 0 20px;
@@ -79,9 +76,7 @@ const ResponsiveFlexWrapper2 = styled(FlexWrapper)`
 @media (max-width:1120px) {
     flex-wrap: wrap;
 }
-    @media ${theme.media.mobil} {
-   
-}`
+`
 
 
 const ResponsiveFlexWrapper3 = styled(FlexWrapper)`
@@ -91,7 +86,16 @@ const ResponsiveFlexWrapper3 = styled(FlexWrapper)`
 }
     @media (max-width: 875px){
     max-width: 600px;
-    margin: 0;
+    margin: 0 auto;
+}
+
+`
+
+const ResponsiveFlexWrapper4 = styled(FlexWrapper)`
+
+    @media (max-width: 875px){
+    max-width: 600px;
+    margin: 92px auto 0;
 }
 
 `
@@ -103,13 +107,9 @@ const CenterLine = styled.div`
     margin:auto 0 ;
     transform: translateX(-50%); /* Для точного централирования */
 
-    @media (max-width:875px) {
-        max-width: 310px;                
-        height: 1px; 
-        margin: 20px auto;
-}
-    @media ${theme.media.mobil} {
-   
+    @media (max-width:875px) {              
+        height: 0; 
+        width: 0;
 }
 `
 
@@ -126,21 +126,14 @@ position: relative;
 
 
 const TextTestimony = styled.p`
-font-family: 'Inter', sans-serif;
-font-weight: 400;
-font-size: 16px;
-
-line-height: 28px;
-letter-spacing: 0px;
 color: ${theme.colors.mediumGrey};
+
+@media (max-width:875px) {
+        margin: 0 auto ;
+}
 `
 
 const Address = styled.span`
-font-family: 'Inter', sans-serif;
-font-weight: 400;
-font-size: 16px;
-line-height: 28px;
-letter-spacing: 0px;
 color: ${theme.colors.mediumGrey};
 `
 
@@ -151,11 +144,19 @@ min-height: 280px;
 color: ${theme.colors.black};
 margin:80px 0 0 0;
 
-
+@media (max-width:875px) {
+        margin: 80px auto 0;
+        max-width: 600px;
+        min-height: 150px;
+}
 
 `
 const MainTitleTestimony = styled.h2`
 color: ${theme.colors.black};
+margin-bottom: 10px;
+@media (max-width:875px) {
+        margin: 0 auto 10px;
+}
 `
 
 
@@ -166,14 +167,14 @@ color: ${theme.colors.black};
 
 
 const DescriptionBlock = styled.span`
-font-family: 'Inter', sans-serif;
-font-weight: 600;
-font-size: 16px;
-
-line-height: 20px;
+margin-bottom: 10px;
 letter-spacing: 3px;
 text-transform: uppercase;
 color: ${theme.colors.black};
+
+@media (max-width:875px) {
+        margin: 0 auto 10px;
+}
 `
 
 

@@ -26,7 +26,7 @@ return (
                         <MainTitleFooter>Subscribe to our letter to get latest updates and news</MainTitleFooter>                        
                         <MiniResponsiveFlexWrapper margin={'0 64px 0 0'} gap={'24px'}>
                             <Field type="mail" placeholder={'Enter Yor Email'}/>
-                            <Button  height={'56px'}>Subscribe</Button>                               
+                            <Button margin="auto 0">Subscribe</Button>                               
                         </MiniResponsiveFlexWrapper>
                         </ResponsiveFlexWrapper1>
                     </IntaractiveBlock>
@@ -92,7 +92,7 @@ const ResponsiveFlexWrapper1 = styled(FlexWrapper)`
 
 const ResponsiveFlexWrapper2 = styled(FlexWrapper)`
 
-@media (max-width:475px) {
+@media (max-width:500px) {
     flex-direction: column;
     gap: 10px;
 }

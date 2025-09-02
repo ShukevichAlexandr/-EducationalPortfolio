@@ -4,6 +4,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper"
 import photo from "../../../assets/images/specialPostImg.webp"
 import { Button } from "../../../components/Button"
 import { theme } from "../../../styles/Theme"
+import { font } from "../../../styles/Common"
 
 export const CpecialPost = () => {
 return (
@@ -12,15 +13,15 @@ return (
             <ResponsiveFlexWrapper1>
                 <Photo src={photo} alt="" />
                 <PositionWrapper>
-                        <FlexWrapper direction={'column'}>
+                        <ResponsiveFlexWrapper3 direction={'column'}>
                         <CommitForBlock>Why we started </CommitForBlock>
                         <FavoriteTitle>It started out as a simple idea and evolved into our passion</FavoriteTitle>
                         <TextBlocks>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</TextBlocks>
                         <ResponsiveFlexWrapper2>
 
-                        <ButtonResponsive width={'269px'} height={'56px'} background={'#FFD050'} margin={'0 0 0 80px'}>{'Discover our story >'}</ButtonResponsive>
+                        <ButtonResponsive width={'269px'} height={'56px'} background={'#FFD050'}>{'Discover our story >'}</ButtonResponsive>
                         </ResponsiveFlexWrapper2>                    
-                    </FlexWrapper>
+                    </ResponsiveFlexWrapper3>
                 </PositionWrapper>
 
             </ResponsiveFlexWrapper1>
@@ -36,26 +37,37 @@ const StyleCpecialPost = styled.section`
 `
 
 const ResponsiveFlexWrapper1 = styled(FlexWrapper)`
-
-@media (max-width:675px) {
-   min-height: 1000px;
-}
-    @media ${theme.media.mobil} {
-   
-}`
+min-height: 920px;
+`
 
 
 const ResponsiveFlexWrapper2 = styled(FlexWrapper)`
 
-@media (max-width:675px) {
-   min-height: 1000px;
-}
-    @media ${theme.media.mobil} {
-   
-}`
+`
+
+
+const ResponsiveFlexWrapper3 = styled(FlexWrapper)`
+    padding: 0 80px;
+
+    @media (max-width: 900px) {
+        padding: 0 40px;  
+    }
+
+    @media (max-width: 550px) {
+        padding: 0 20px;  
+    }
+
+    @media (max-width: 550px) {
+        padding: 0 5px;  
+    }
+
+`
 
 const ButtonResponsive = styled(Button)`
-    margin: 0 0 0 20px;
+
+    @media (max-width: 600px) {
+            margin-right: 20px ;  
+    }
 `
 const Photo = styled.img`
     max-width: 950px;
@@ -65,38 +77,43 @@ const Photo = styled.img`
     object-fit: cover;
     @media (max-width: 930px) {
             padding: 0 ;  
-        }
+    }
+
 `
 
 const CommitForBlock = styled.span`
         color: ${theme.colors.black};
-        padding: 80px 0 24px 80px;
+        padding: 80px 0 24px ;
         max-width: 220px;
         @media (max-width: 1000px) {
-            padding: 20px 0 24px 20px;    
+            padding: 80px 0 24px 0;    
         }
 `
 
 const FavoriteTitle = styled.h1`
+    ${font({family: "'inter', sans-serif", weight: 700, Fmax:48, Fmin:20})};
+    letter-spacing: -0.004em;
+
+
+
     color: ${theme.colors.black};
-    padding: 0 80px 16px;
+    padding: 0 80px 0 0;
     @media (max-width: 1000px) {
-            padding: 0 20px 16px;;    
+            padding: 0 0 16px 0;    
         }
 `
 const TextBlocks = styled.p`
     color: ${theme.colors.mediumGrey};      
-    padding: 0 80px 32px ;
+    padding: 0 0 32px 0;
     @media (max-width: 1000px) {
-            padding: 0 20px 32px;;    
+            padding: 0 0 32px 0;    
         }
 `
 
 const PositionWrapper = styled.div`
-margin:121px 0 0 0;
-max-width: 706px;
-max-height: 584px;
-    /* width: 100%; */
+    margin:121px 0 0 0;
+    max-width: 706px;
+    max-height: 584px;
     height: 100%;
     position: absolute;
     left: 45%;
@@ -105,4 +122,9 @@ max-height: 584px;
     flex-grow: 1;
         
     background-color: ${theme.colors.font};
+
+
+    @media (max-width: 600px) {
+        left: 35%;    
+        }
 `

@@ -18,7 +18,7 @@ return (
                             <FlexWrapper direction={'column'} minHeight={'320px'}>
                                 <SubTitle id="featuredPost">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</SubTitle>
                                 <TextFeaturedPost className={'textFeaturedPost'}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</TextFeaturedPost>
-                                <Button width={'204px'} height={'56px'} background={'#FFD050'}>{'Read More >'}</Button>
+                                <Button  background={'#FFD050'}>{'Read More >'}</Button>
                             </FlexWrapper>
 
                                 
@@ -33,19 +33,11 @@ return (
 
 
 const StyleLeftSide = styled.div`
-    max-width: 733px;
+    max-width: 734px;
     width: 100%;
-    min-height: 805px;
+    min-height: 700px;
 `
 
-const ResponsiveFlexWrapper1 = styled(FlexWrapper)`
-
-@media (max-width:875px) {
-    flex-direction: column;
-}
-    @media ${theme.media.mobil} {
-   
-}`
 
 const Photo = styled.img`
 
@@ -55,15 +47,24 @@ const Photo = styled.img`
     width: 100%;
     object-fit: cover;
     padding-bottom: 32px;
+
+    @media (max-width:400px) {
+        max-width: 360px;
+        min-width: 260px;
+        height: 260px;
+    }
+
+    @media (max-width:300px) {
+        max-width: 240px;
+        min-width: 220px;
+        height: 240px;
+    }
 `
 
 const SubTitle = styled.h2`
     color: black;
     max-width: 650px;
     padding-bottom: 16px;
-    @media (max-width:500px) {
-        padding-left: 20px;
-    }
 `
 
 const PostMetadata = styled.label`

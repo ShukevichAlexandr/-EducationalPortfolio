@@ -29,36 +29,32 @@ body {
 
 
 button{
-    cursor: pointer;
-    font-family: 'Sen', sans-serif ;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0px;  
-}
-
-
-//  Inter Regular 400
-p{
-  font-family: 'Inter', sans-serif ;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: 1px;
-}
-
-
-
-
-//  Inter Regular 400
-span.nameAutor,
-#postMetadata {   
-  font-family: 'Inter', sans-serif ;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
+  ${font({family: "'Sen', sans-serif", weight: 700, Fmax:18, Fmin:12})};
   letter-spacing: 0px;
+    cursor: pointer;  
+}
 
+
+//  Inter Regular 400
+p {
+  ${font({family: "'Inter', sans-serif", weight: 400, Fmax:16, Fmin:13})};
+  line-height: 175%;
+  letter-spacing: 0.062em; 
+}
+
+
+
+
+//  Inter Regular 400
+a.nameAutor,
+span.postMetadata {   
+  ${font({family: "'Sen', sans-serif", weight: 700, Fmax:16, Fmin:12})};
+  letter-spacing: 0.062em;
+
+}
+
+a.nameAutor{
+  color: ${theme.colors.purple}
 }
 
 
@@ -73,16 +69,13 @@ font-family: 'Inter', sans-serif ;
 }
 
 
-//  Inter Black 900
-span.mainBoldWord {
-  font-family: 'Inter', sans-serif ;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 3px;  
+
+
+label {
+    ${font({family: "'Sen', sans-serif", weight: 700, Fmax:16, Fmin:12})};
+    letter-spacing: 0.062em;
+    line-height: 1.2;
 }
-
-
 
 h2 {
   ${font({family: "'Sen', sans-serif", weight: 700, Fmax:36, Fmin:24})};
@@ -102,11 +95,8 @@ h4 {
 
 a.rightSideLinkFeatured,
 a.linkHeader {
-    font-family: 'Inter' sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-    letter-spacing: 0px;
+    ${font({family: "'Inter', sans-serif", weight: 400, Fmax:16, Fmin:12})};
+    letter-spacing: 0px;  
 }
 
 

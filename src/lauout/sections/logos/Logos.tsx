@@ -8,12 +8,12 @@ export const Logos = () => {
 return (
     <StyleLogos>
         <Container>
-            <FlexWrapper maxWidth={'1237px'} minHeight={'52px'} margin={'0 auto'} gap="60px">
-                <ResponsiveFlexWrapper1 direction={'column'} width={'136px'}>
+            <ResponsiveFlexWrapper1 maxWidth={'1237px'} minHeight={'52px'} margin={'0 auto'} gap="60px">
+                <ResponsiveFlexWrapper2 direction={'column'} width={'136px'}>
                     <TextLogos>We are</TextLogos>
                     <MainTitleLogos>Featured in</MainTitleLogos>
-                </ResponsiveFlexWrapper1>
-                    <ResponsiveFlexWrapper2 width={'1015px'} gap={'40px'} justify={'space-between'} padding={'10px 0 0 0'}>
+                </ResponsiveFlexWrapper2>
+                    <ResponsiveFlexWrapper3 maxWidth={'1015px'} gap={'40px'} justify={'space-between'} padding={'10px 0 0 0'}>
                     
                     <ResponsiveLogoWrapper1 gap={'40px'}>
                         <LogoIconWrapper1>
@@ -49,35 +49,59 @@ return (
                         </LogoIconWrapper5>
                     </ResponsiveLogoWrapper2>
 
-                    </ResponsiveFlexWrapper2>
+                    </ResponsiveFlexWrapper3>
                     
-            </FlexWrapper>
+            </ResponsiveFlexWrapper1>
         </Container>
     </StyleLogos>
 )
 }
 
 
+
 const ResponsiveFlexWrapper1 = styled(FlexWrapper)`
-@media (max-width:500px) {
-    min-height: 420px;
-}
+      @media (max-width:500px) {
+        flex-direction: column;
+    }
 `
 
 
 const ResponsiveFlexWrapper2 = styled(FlexWrapper)`
+@media (max-width:500px) {
+    margin: 0 auto;
+    min-height: 80px;
+}
+
+@media (max-width:500px) {
+    margin: 0;
+    min-height: 80px;
+}
+
+`
+
+
+const ResponsiveFlexWrapper3 = styled(FlexWrapper)`
 @media (max-width:1300px) {
     flex-wrap: wrap;
 }
 
-    @media (max-width:900px) {
-       
-    }
  
     @media ${theme.media.mobil} {
     flex-direction :column ;
     gap: 60px;
-}`
+    }
+
+    @media (max-width:500px) {
+    margin: 0 auto 30px;
+    max-width: 300px;
+    }
+
+    @media (max-width:350px) {
+    margin: 0 0 0 30px;
+    max-width: 200px;
+    }
+
+`
 
 
 const ResponsiveLogoWrapper1 = styled(FlexWrapper)`
@@ -104,6 +128,7 @@ const LogoContainer = styled.div`
     margin: 12px auto;
     width: 200px;
     height: 48px;
+
 `
 
 const LogoIconWrapper1 = styled.div`
@@ -141,6 +166,10 @@ const TextLogos = styled.span`
     letter-spacing: 0px;
     color: ${theme.colors.mediumGrey};
     padding-left: 80px;
+
+    @media (max-width:500px) {
+        padding-left: 20px;
+    }
 `
 
 const MainTitleLogos = styled.h4`
@@ -152,5 +181,9 @@ const MainTitleLogos = styled.h4`
     color: ${theme.colors.mediumGrey};
     width: 240px;
     padding-left: 80px;
+
+    @media (max-width:500px) {
+        padding-left: 20px;
+    }
 `
 

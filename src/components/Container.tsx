@@ -14,5 +14,5 @@ export const Container = styled.div<ContainerPropsType>`
     padding: ${props => props.padding || '0'};
     margin: ${props => props.margin || '0 auto'};
     outline: 1px solid red;
-    transform: ${props => props.transform || 'none'}
+    transform: ${props => props.transform || 'none'};
 ` 

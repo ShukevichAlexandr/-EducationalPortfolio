@@ -32,10 +32,6 @@ text-align: center;
 const InviteText = styled.p`
 margin-top: 10px;
 max-width: 400px;
-font-family: 'Inter', sans-serif;
-font-weight: 400;
-font-size: 16px;
-line-height: 28px;
 letter-spacing: 0px;
 color: ${theme.colors.mediumGrey};
 text-align: center;

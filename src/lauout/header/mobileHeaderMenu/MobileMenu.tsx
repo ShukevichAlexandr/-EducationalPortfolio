@@ -26,7 +26,7 @@ return (
 const StyledMobileHeaderMenu = styled.nav`
 display: none;
 
-@media (max-width:840px) {
+@media (max-width:900px) {
         display: block;
     }
 
@@ -46,7 +46,7 @@ const Link = styled.a`
 const BurgerButton = styled.button<{isOpen: boolean}>`
     position: fixed;
     top: 47px;
-    right: 255px;
+    right: 225px;
     width: 56px;
     height: 56px;
     z-index: 9999999;
@@ -54,6 +54,22 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
     background-color: transparent;
     border: none;
 
+    @media (max-width: 950px) {
+        right: 300px;
+    }
+    
+    @media (max-width: 950px) {
+        right: 225px;
+    }
+
+    @media (max-width: 500px) {
+        right: 185px;
+    }
+
+    @media (max-width: 340px) {
+        top: 34px;
+        right: 80px;
+    }
 
 
     span {
@@ -82,7 +98,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
             transform: translateY(-10px);
 
             ${props => props.isOpen && css<{isOpen: boolean}> `
-               transform: rotate(-45deg) translateY(0);
+            transform: rotate(-45deg) translateY(0);
             `}
 
         }

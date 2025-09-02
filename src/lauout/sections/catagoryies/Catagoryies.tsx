@@ -34,7 +34,7 @@ return (
 
 const ResponsiveFlexWrapper1 = styled(FlexWrapper)`
 @media (max-width:784px) {
-    min-height: 1300px;
+    min-height: 1200px;
 }
 `
 
@@ -42,11 +42,16 @@ const ResponsiveFlexWrapper2 = styled(FlexWrapper)`
 @media (max-width:1175px) {
     flex-wrap: wrap;
 }
-    @media ${theme.media.mobil} {
-    flex-direction :column ;
-    gap: 60px;
-    flex-wrap: nowrap;
-}`
+
+@media (max-width:784px) {
+    min-height: 1020px;
+    justify-content: space-around;
+
+}
+    @media (max-width:500px) {
+    padding: 0 20px;
+}
+`
 
 
 

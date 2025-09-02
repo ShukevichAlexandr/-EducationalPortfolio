@@ -13,14 +13,14 @@ export const Header = () => {
 return (
     <StyledHeader>
         <ResponsiveContainer padding={'0 80px'}>
-                <ResponsiveFlexWrapper justify={'space-between'} height={'80px'} gap={'100px'}>
+                <ResponsiveFlexWrapper1 justify={'space-between'} minHeight={'80px'} gap={'100px'}>
                     <LogoComponent />
-                    <FlexWrapper gap={'30px'} align={'center'} justify={'space-between'}>
+                    <ResponsiveFlexWrapper2 gap={'30px'} align={'center'} justify={'space-between'}>
                         <HeaderMenu menuItems={items}/>
                         <MobileHeaderMenu menuItems={items}/>
                         <Button>Subscribe</Button>
-                    </FlexWrapper>     
-            </ResponsiveFlexWrapper>
+                    </ResponsiveFlexWrapper2>     
+            </ResponsiveFlexWrapper1>
         </ResponsiveContainer>
     </StyledHeader>
 )
@@ -28,7 +28,9 @@ return (
 
 
 const ResponsiveContainer = styled(Container)`
-
+    @media (max-width:500px) {
+        padding: 0 20px;
+    }
 `
 
 const StyledHeader = styled.header`
@@ -45,32 +47,59 @@ ul{
     list-style: none;
 }
 
+
 `
 
-const ResponsiveFlexWrapper = styled(FlexWrapper)`
+const ResponsiveFlexWrapper1 = styled(FlexWrapper)`
 
-@media (max-width: 960px) {
+@media (max-width: 1050px) {
     justify-content: space-around;
-    gap: none;
+    gap: 0;
+}
+
+@media (max-width: 500px) {
+    gap: 0;
+}
+
+@media (max-width: 340px) {
+    
+    max-width:200px ;
 }
 `
 
+const ResponsiveFlexWrapper2 = styled(FlexWrapper)`
+margin: auto 0;
+
+
+`
 
 const Button = styled.button`
     width: 180px;   
     height: 40px;
     background-color: #FBF6EA;
-    @media (max-width: 840px){
+    color: black;
+    @media (max-width: 900px){
 
-        max-width: 180px;
+        max-width: 150px;
         height: 40px;
         position: fixed;
         top: 34px;
-        right: 30px;
+        right: 40px;
     }
     
+    @media (max-width:500px) {
+        max-width: 100px;
+        height: 30px;
+        position: fixed;
+        top: 36px;
+        right: 30px;
+    }
 
-
+    @media (max-width: 340px) {
+        position: fixed;
+        top: 58px;
+        right: 35px;
+}
 `
 
 
