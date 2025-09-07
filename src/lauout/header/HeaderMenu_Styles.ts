@@ -1,51 +1,51 @@
+
 import styled, { css } from "styled-components"
-import { theme } from "../../../styles/Theme"
+import { theme } from "../../styles/Theme"
 
-export const MobileHeaderMenu = (props: {menuItems: Array<string>}) => {
-return (
-    <StyledMobileHeaderMenu>
-        <BurgerButton isOpen={false}>
-            <span></span>
-        </BurgerButton>
 
-        <MobileMenuPopup isOpen={false}>
-        <ul>
-            {props.menuItems.map((item, index)=>{
-                return <ListItem key={index}>
-                            <Link className={'linkHeader'} href="">
-                                {item}
-                            </Link>
-                        </ListItem>
-            })}
-        </ul>
-        </MobileMenuPopup>
-    </StyledMobileHeaderMenu>
-)
-}
+//menu
 
-const StyledMobileHeaderMenu = styled.nav`
-display: none;
 
-@media (max-width:900px) {
-        display: block;
-    }
-
+const MenuItem = styled.li`
+    width: 100px;
 `
-
-const ListItem = styled.li`
-`
-
 
 const Link = styled.a`
     color: ${theme.colors.lightGrey};
     cursor: pointer;
-    
+    width: 100px;
 `
+//mobile menu
 
+const MobileHeaderMenu = styled.nav`
+
+ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    position: fixed;
+    top: 100px;
+    right: 42px;
+
+
+    @media (max-width: 900px) {
+        right: 27px;
+    }
+
+    @media (max-width: 500px) {
+        top: 90px;
+        right: 3px;
+    } 
+    }
+`
 
 const BurgerButton = styled.button<{isOpen: boolean}>`
     position: fixed;
-    top: 47px;
+    top: 20px;
     right: 225px;
     width: 56px;
     height: 56px;
@@ -54,21 +54,19 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
     background-color: transparent;
     border: none;
 
-    @media (max-width: 950px) {
-        right: 300px;
-    }
     
-    @media (max-width: 950px) {
-        right: 225px;
+    @media (max-width: 900px) {
+        right: 50px;
     }
 
     @media (max-width: 500px) {
-        right: 185px;
+        top: 19px;
+        right: 25px;
     }
 
     @media (max-width: 340px) {
-        top: 34px;
-        right: 80px;
+        top: 19px;
+        right: 25px;
     }
 
 
@@ -79,14 +77,12 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         background-color: ${theme.colors.font};
 
         position: absolute;
-        left: 40px;
-        bottom: 50px;
+        left: 10px;
+        bottom: 25px;
 
         ${props => props.isOpen && css<{isOpen: boolean}> `
             background-color: rgba(255, 255, 255, 0);
-
-                
-            `}
+        `}
 
         &::before{
             content:'';
@@ -124,12 +120,11 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
 const MobileMenuPopup = styled.div<{isOpen: boolean}>`
     position: fixed;
     top: 0;
-    left:0;
     right: 0;
+    left: 0;
     bottom: 0;
-    
     z-index: 99999;
-    background-color: rgba(31, 31, 32, 0.9);
+    background-color: #232536;
     display: none;
 
 
@@ -138,14 +133,26 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
         justify-content: center;
         align-items: center;
 
-    `}
+    `
+}`
 
-ul{
+//desktopMenu
+
+
+const DesktopMenu = styled.nav`
+    ul{
         display: flex;
-        gap: 30px;
+        gap: 20px;
         justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    
+    }    
 `
+
+
+export const S = {
+    MenuItem, 
+    Link,
+    MobileHeaderMenu,
+    BurgerButton,
+    MobileMenuPopup,
+    DesktopMenu
+}

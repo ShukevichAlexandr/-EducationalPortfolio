@@ -16,8 +16,4 @@ const IconLink = styled.a`
 display: flex;
 align-items: center;
 
-@media (max-width: 340px) {
-    align-items: flex-start;
-    margin: 10px auto;
-}
 `

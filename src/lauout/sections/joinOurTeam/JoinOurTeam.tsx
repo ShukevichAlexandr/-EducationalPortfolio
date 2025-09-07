@@ -3,36 +3,21 @@ import { Container } from "../../../components/Container"
 import { FlexWrapper } from "../../../components/FlexWrapper"
 import { Button } from "../../../components/Button"
 import { theme } from "../../../styles/Theme"
+import { S } from "./JoinOurTeam_Styles"
 
-export const JoinOurTeam = () => {
+
+export const JoinOurTeam:React.FC = () => {
 return (
-    <StyleJoinOurTeam>
+    <S.JoinOurTeam>
         <Container>
             <FlexWrapper  direction={'column'} maxWidth={'400px'}>
-                <InviteTitle>Join our team to be a part of our story</InviteTitle>
-                <InviteText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</InviteText>
+                <S.InviteTitle>Join our team to be a part of our story</S.InviteTitle>
+                <S.InviteText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</S.InviteText>
                 <Button margin={'20px auto 0'}>Join Now</Button>
             </FlexWrapper>    
         </Container>        
-    </StyleJoinOurTeam>
+    </S.JoinOurTeam>
 )
 }
 
 
-const StyleJoinOurTeam = styled.section`
-margin: 128px auto;
-    max-width: 414px;
-`
-
-const InviteTitle = styled.h2`
-color: ${theme.colors.black};    
-text-align: center;
-`
-
-const InviteText = styled.p`
-margin-top: 10px;
-max-width: 400px;
-letter-spacing: 0px;
-color: ${theme.colors.mediumGrey};
-text-align: center;
-`
