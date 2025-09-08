@@ -45,7 +45,11 @@ const ResponsiveFlexWrapper1 = styled(FlexWrapper)`
 
 const ResponsiveFlexWrapper2 = styled(FlexWrapper)`
 margin: auto 0;
+max-width: 500px;
 
+up {
+    gap: 24px;
+}
 
 `
 

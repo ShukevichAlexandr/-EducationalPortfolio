@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { Slide } from './slide/Slide';
 import photo1 from '../../../../assets/images/JonatanVallem.webp'; 
 import photo2 from '../../../../assets/images/ivanova alexandra.webp'; 
 import photo3 from '../../../../assets/images/Koldunov brother.webp'; 
 import arrowLeft from '../../../../assets/images/svg/ArrowLeft.svg'
 import arrowRight from '../../../../assets/images/svg/ArrowRirht.svg'
-import { FlexWrapper } from '../../../../components/FlexWrapper';
+import { S } from '../sliders/Sliders_Styles';
 
 
 
@@ -41,84 +40,28 @@ export const Sliders = () => {
   };
 
   return (
-    <StyleSliders>
+    <S.Sliders>
       {/* Отображаем активный слайд */}
       <Slide {...slidesData[currentIndex]} />
       
       {/* Кнопки навигации */}
     
-<ResponsiveFlexWrapper>
+<S.ResponsiveFlexWrapper>
 
-    <ButtonBackBlock>   
-      <BtnPrev onClick={handlePrevClick}><img src={arrowLeft} alt="картинка для кнопки перелистывания на левый отзыв" /></BtnPrev>
-    </ButtonBackBlock>
+    <S.ButtonBackBlock>   
+      <S.BtnPrev onClick={handlePrevClick}><img src={arrowLeft} alt="картинка для кнопки перелистывания на левый отзыв" /></S.BtnPrev>
+    </S.ButtonBackBlock>
 
-    <ButtonBackBlock>
-      <BtnNext onClick={handleNextClick}><img src={arrowRight} alt="картинка для кнопки перелистывания на правый отзыв" /></BtnNext>
-    </ButtonBackBlock>
+    <S.ButtonBackBlock>
+      <S.BtnNext onClick={handleNextClick}><img src={arrowRight} alt="картинка для кнопки перелистывания на правый отзыв" /></S.BtnNext>
+    </S.ButtonBackBlock>
 
-</ResponsiveFlexWrapper>
+</S.ResponsiveFlexWrapper>
 
 
 
       
-    </StyleSliders>
+    </S.Sliders>
   );
 };
-
-const StyleSliders = styled.div`
-    display: flex;
-    
-`
-const ResponsiveFlexWrapper = styled(FlexWrapper)`
-  align-items: flex-end;
-  max-height: 330px;
-  margin: auto 0;
-`
-
-
-
-const ButtonBackBlock = styled.div`
-    width: 62px;
-    height: 62px;
-    position: relative;
-`
-
-
-const BtnNext = styled.button`
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: black;
-    border: none;
-    position: absolute;
-    top: 12.5%;
-    left: 12.5%;
-
-    &:Hover{
-        top: 5%;
-        left: 5%;
-        width: 62px;
-        height: 62px;  
-        position: absolute;     
-    }
-`
-const BtnPrev = styled.button`
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: aliceblue;
-    border: none;
-    position: absolute;
-    top: 12.5%;
-    left: 12.5%;
-
-&:Hover{
-        top: 5%;
-        left: 5%;
-        width: 62px;
-        height: 62px;  
-        position: absolute;     
-    }
-`
 

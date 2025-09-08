@@ -9,13 +9,28 @@ import styled from "styled-components"
 
 const ResponsiveFlexWrapper1 = styled(FlexWrapper)`
 
+@media (max-width:1250px) {
+    max-width: 400px;
+}
+
 @media (max-width:1000px) {
     max-width: 300px;
 }
     @media (max-width: 875px){
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
 }
+
+    @media (max-width: 600px){
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+    @media (max-width: 460px){
+    max-width: 250px;
+    margin: 0 auto;
+}
+
 `
 
 const ResponsiveFlexWrapper2 = styled(FlexWrapper)`
@@ -23,19 +38,18 @@ const ResponsiveFlexWrapper2 = styled(FlexWrapper)`
 @media (max-width:1100px) {
     flex-wrap: wrap;
 }
+
 `
 
 const SubTitleTestimony = styled.h4`
-max-width: 400px;
-min-height: 280px;
-
+max-width: 470px;
 color: ${theme.colors.black};
-margin:80px 0 0 0;
+margin:80px 0 120px 0;
 
 @media (max-width:875px) {
-        margin: 80px auto 0;
-        max-width: 600px;
-        min-height: 150px;
+        max-width: 700px;
+        min-width: 200px;
+        margin:80px 0 120px 0;
 }
 `
 
@@ -48,7 +62,7 @@ position: relative;
 `
 
 const AutorsName = styled.h4`
-width: 250px;
+width: 120px;
 color: ${theme.colors.black};
 `
 

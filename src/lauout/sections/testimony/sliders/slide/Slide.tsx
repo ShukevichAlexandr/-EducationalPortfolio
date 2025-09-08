@@ -19,7 +19,7 @@ export const Slide = ({
   address
 }: SlidePropsType): React.ReactElement => {
 return (
-    <Sl.ResponsiveFlexWrapper1 direction="column" maxWidth="555px" margin={'0 0 0 120px'}>
+    <Sl.ResponsiveFlexWrapper1 direction="column" width="555px">
         <Sl.SubTitleTestimony>
         {description ||
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'

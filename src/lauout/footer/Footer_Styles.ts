@@ -46,6 +46,8 @@ padding: 0 20px;
 `
 
 const MiniResponsiveFlexWrapper = styled(FlexWrapper)`
+max-width: 450px;
+
 
 @media (max-width:690px) {
     flex-direction: column;

@@ -7,7 +7,7 @@ import { theme } from "../../styles/Theme"
 
 
 const MenuItem = styled.li`
-    width: 100px;
+    max-width: 100px;
 `
 
 const Link = styled.a`
@@ -21,7 +21,7 @@ const MobileHeaderMenu = styled.nav`
 
 ul {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -142,7 +142,7 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
 const DesktopMenu = styled.nav`
     ul{
         display: flex;
-        gap: 20px;
+        gap: 24px;
         justify-content: center;
     }    
 `

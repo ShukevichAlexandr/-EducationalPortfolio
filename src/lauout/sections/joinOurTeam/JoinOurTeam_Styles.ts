@@ -13,7 +13,7 @@ text-align: center;
 `
 
 const InviteText = styled.p`
-margin-top: 10px;
+margin-top: 16px;
 max-width: 400px;
 letter-spacing: 0px;
 color: ${theme.colors.mediumGrey};

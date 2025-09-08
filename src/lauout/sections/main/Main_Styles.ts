@@ -12,7 +12,7 @@ const StyledMain = styled.section`
 
 const PositionWraper = styled.div`
   position: absolute;
-  top: 208px;
+  top: 228px;
   padding: 0 80px;
   z-index: 2;
 
@@ -50,7 +50,7 @@ const ImageContainer = styled.div`
 const Photo = styled.img`
   max-width: 1440px;
   width: 100%;
-  max-height: 720px;
+  height: 720px;
   object-fit: cover;
   transform: scaleX(-1);
 
@@ -75,6 +75,8 @@ const MainTitle = styled.h1`
   font-weight: 700;
   font-size: 56px;
   letter-spacing: -0.035em;
+
+  margin: 24px 0;
   
   @media (max-width:1200px) {
     font-size: 50px;
@@ -92,10 +94,12 @@ const MainTitle = styled.h1`
 const SmallText = styled.p`
 max-width: 650px;
 width: 100%;
+
+margin-bottom: 48px;
 `
 
 const PostMetadata = styled.label`
-  
+  margin-bottom: 16px;
 `
 
 const Name = styled.a`

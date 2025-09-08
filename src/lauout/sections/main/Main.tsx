@@ -17,7 +17,7 @@ export const Main:React.FC = () => {
           <S.ShadowOverlay/>
           </S.ImageContainer>
           <S.PositionWraper>
-          <FlexWrapper direction="column" gap={"15px"} maxWidth="804px" minHeight="400px" justify={'space-between'}>
+          <FlexWrapper direction="column"  maxWidth="804px" minHeight="400px" >
             <S.UpperCaseText >POSTED ON <S.BoldWord>STARTUP</S.BoldWord></S.UpperCaseText>
             <S.MainTitle id="postedOnStartup">Step-by-step guide to choosing great font pairs</S.MainTitle>
             <S.PostMetadata htmlFor="postedOnStartup" className="postMetadata">By <S.Name className="nameAutor" href="">James West</S.Name> | May 23, 2022</S.PostMetadata>

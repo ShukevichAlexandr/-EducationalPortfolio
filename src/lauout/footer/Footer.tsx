@@ -15,16 +15,15 @@ return (
     <S.Footer id="footer">
         <Container>
             <S.ResponsiveFlexWrapper3 padding={'0 80px'} direction={'column'}>
-                <FlexWrapper justify={'space-between'} margin={'61px 0 54px 0'}>
+                <FlexWrapper justify={'space-between'} margin={'60px 0 56px 0'}>
                     <LogoComponent/>
                     <FooterMenu menuItems={items}/>
-                    {/* <MobileFooterMenu menuItems={items}/> */}
                 </FlexWrapper>
                 <S.StyleBox>
                     <S.IntaractiveBlock>
-                        <S.ResponsiveFlexWrapper1 maxWidth={'1280px'} padding={'50px 20px'} margin={'0 auto'}>
+                        <S.ResponsiveFlexWrapper1 maxWidth={'1280px'} padding={'80px 64px'} margin={'0 auto'}>
                         <S.MainTitleFooter>Subscribe to our letter to get latest updates and news</S.MainTitleFooter>                        
-                        <S.MiniResponsiveFlexWrapper margin={'0 64px 0 0'} gap={'24px'}>
+                        <S.MiniResponsiveFlexWrapper  gap={'24px'}>
                             <S.Field type="mail" placeholder={'Enter Yor Email'}/>
                             <Button margin="auto 0">Subscribe</Button>                               
                         </S.MiniResponsiveFlexWrapper>
@@ -32,7 +31,7 @@ return (
                     </S.IntaractiveBlock>
                 
                 </S.StyleBox>
-                <S.ResponsiveFlexWrapper2 margin={'30px 0 '} justify={'space-between'} maxWidth={'1280px'}>
+                <S.ResponsiveFlexWrapper2 margin={'48px 0 56px'} justify={'space-between'} maxWidth={'1280px'}>
                     <FlexWrapper maxWidth={'361px'} direction={'column'}>
                         <S.FooterText>Finsteer 118 2561 Fintown</S.FooterText>
                         <S.FooterText>Hello@finsweet.com 020 7993 2905</S.FooterText>

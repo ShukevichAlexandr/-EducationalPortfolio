@@ -3,6 +3,7 @@ import { DesktopMenu } from './headerMenu/desktopMenu/DesktopMenu';
 import { LogoComponent } from '../../components/logo/LogoComponent';
 import { MobileHeaderMenu } from './headerMenu/mobileHeaderMenu/MobileMenu';
 import { S } from './Header_Styles';
+import { FlexWrapper } from '../../components/FlexWrapper';
 
 
 
@@ -21,12 +22,13 @@ export const Header: React.FC = () => {
 
 return (
     <S.Header>
-        <S.ResponsiveContainer padding={'0 80px'} className='HeaderContainer'>
+        <S.ResponsiveContainer padding={'0 80px'} className='HeaderContainer' >
                 <S.ResponsiveFlexWrapper1 justify={'space-between'} minHeight={'80px'} gap={'100px'}>
                     <LogoComponent />
-                    <S.ResponsiveFlexWrapper2 gap={'30px'} align={'center'} justify={'space-between'}>
-
-                        {width < breakpoint ? <MobileHeaderMenu menuItems={items}/> :  <DesktopMenu menuItems={items}/>}
+                    <S.ResponsiveFlexWrapper2 gap={'16px'} align={'center'} >
+                        {/* <FlexWrapper gap={'24px'}> */}
+                            {width < breakpoint ? <MobileHeaderMenu menuItems={items}/> :  <DesktopMenu                             menuItems={items}/>}
+                        {/* </FlexWrapper> */}
 
                         <S.Button>Subscribe</S.Button>
                     </S.ResponsiveFlexWrapper2>     
